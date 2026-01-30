@@ -1,0 +1,21 @@
+@font-face {
+font-family: 'roboto';
+ src: local('roboto'), url(./fonts/Roboto-Italic-VariableFont_wdth\,wght.ttf) format('truetype');
+}
+
+.circleButton {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #0b2a5b;
+  color: white;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'roboto', sans-serif;
+  font-size: 40px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}

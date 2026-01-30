@@ -1,0 +1,227 @@
+/* =========================
+   FONT
+========================= */
+@font-face {
+  font-family: 'roboto';
+  src: local('roboto'),
+       url('./fonts/Roboto-Italic-VariableFont_wdth,wght.ttf') format('truetype');
+}
+
+/* =========================
+   VARIÁVEIS (cores)
+========================= */
+:root {
+  --azul-escuro: #0b2a5b;
+  --cinza-texto: #747474;
+  --cinza-borda: #555;
+  --cinza-claro: #d3d3d3;
+  --cinza-bg: #e0e0e0;
+  --cinza-group: #c4c4c4;
+}
+
+/* =========================
+   RESET / BASE
+========================= */
+html, body {
+  font-family: 'roboto', sans-serif;
+  background: #f5f7fa;
+  margin: 0;
+  height: 100%;
+ 
+}
+
+h1 {
+  color: var(--azul-escuro);
+}
+
+p {
+  color: var(--cinza-texto);
+  font-size: 20px;
+}
+
+/* =========================
+   LAYOUT
+========================= */
+.app {
+  min-height: 100vh;          /* ocupa a tela inteira */
+  display: flex;
+  justify-content: center;    /* centro horizontal */
+  align-items: center;        /* centro vertical */
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 15px;
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+/* =========================
+   LOGO
+========================= */
+.logo {
+  width: 80%;
+  max-width: 500px;
+  margin-bottom: 0;
+}
+
+/* =========================
+   INPUTS E SELECT
+========================= */
+input,
+.selectHoras {
+  width: 90%;
+  padding: 10px;
+  margin: 0px 0 12px;
+  font-size: 35px;
+  border-radius: 10px;
+  border: 2px solid var(--cinza-borda);
+  color: var(--cinza-texto);
+}
+
+.inputJogadores {
+  width: 60px;
+  margin-right: 40px;
+}
+
+.selectHoras {
+  width: 170px;
+}
+
+/* =========================
+   BOTÕES
+========================= */
+.circleButton {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 2px solid var(--azul-escuro);
+  font-size: 40px;
+  font-weight: bold;
+  background: transparent;
+  color: var(--azul-escuro);
+}
+
+/* =========================
+   GRUPOS
+========================= */
+.groups {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  width: 100%;
+  height: 30vh;
+  border: 2px solid var(--cinza-texto);
+  border-radius: 10px;
+  padding-bottom: 15px;
+}
+
+.group {
+  display: flex;
+  width: 90%;
+  padding: 10px;
+  margin: 5px 0 12px;
+  border: 2px solid var(--cinza-claro);
+  border-radius: 10px;
+  background-color: var(--cinza-group);
+}
+
+/* =========================
+   CARD
+========================= */
+.card {
+  position: relative;
+  width: 90%;
+  max-width: 500px;
+  padding: 24px;
+  margin: 25px 0 24px;
+  background: var(--cinza-bg);
+  border-radius: 16px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+}
+
+/* =========================
+   BADGE
+========================= */
+.badge {
+  display: flex;
+
+  position: absolute;
+  top: -18px;
+  left: 20px;
+  padding: 10px 22px;
+  background: var(--azul-escuro);
+  color: #fff;
+  border-radius: 14px;
+  font-size: 20px;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* =========================
+   CONTEÚDO DO CARD
+========================= */
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 16px;
+}
+
+.infos p {
+  margin: 6px 0;
+  font-size: 16px;
+  color: #555;
+}
+
+.infos strong {
+  color: var(--azul-escuro);
+}
+
+.valor {
+  text-align: right;
+}
+
+.valor p {
+  margin: 0;
+  font-size: 15px;
+  color: #777;
+}
+
+.valor strong {
+  font-size: 20px;
+  color: #888;
+  font-weight: bold;
+}
+
+/* =========================
+   DESTAQUE
+========================= */
+.destaqueH3 {
+  background-color: var(--azul-escuro);
+  color: #fff;
+  padding: 1px;
+  border-radius: 5px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* =========================
+   LABELS
+========================= */
+.labels {
+  color: var(--azul-escuro);
+  align-self: flex-start;
+  
+}
