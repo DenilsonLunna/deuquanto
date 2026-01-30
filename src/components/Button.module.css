@@ -19,6 +19,9 @@ box-shadow: #494949 2px 2px 8px;
   background-color: #c2c2c2;
   color: #0b2a5b;
   border: 2px solid #0b2a5b;
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 10px;
 }
 .secondary {
   

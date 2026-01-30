@@ -14,7 +14,7 @@ return (
         + Novo Jogo
         </Button>
         <Button variant="primary" onClick={() => navigate("/como-funciona")}>
-        ❓ Como Funciona
+        ❓Como Funciona
         </Button>
 
         </div>
