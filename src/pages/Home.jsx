@@ -13,6 +13,9 @@ return (
         <Button onClick={() => navigate("/dados")}>
         + Novo Jogo
         </Button>
+        <Button variant="primary" onClick={() => navigate("/como-funciona")}>
+        ❓ Como Funciona
+        </Button>
 
         </div>
     </div>

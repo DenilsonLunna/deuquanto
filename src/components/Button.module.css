@@ -6,8 +6,7 @@ button {
 width: 80%;
 max-width: 500px;
 padding: 25px;
-background: #0b2a5b;
-color: white;
+background-color: #0b2a5b;
 border: none;
 border-radius: 20px;
 font-family: 'roboto', sans-serif;
@@ -15,4 +14,13 @@ font-size: 40px;
 font-weight: 600;
 box-shadow: #494949 2px 2px 8px;
 
+}
+.primary {
+  background-color: #c2c2c2;
+  color: #0b2a5b;
+  border: 2px solid #0b2a5b;
+}
+.secondary {
+  
+  color: white;
 }

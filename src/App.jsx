@@ -2,6 +2,7 @@ import { Routes, Route } from "react-router-dom"
 import Home from "./pages/Home"
 import GameData from "./pages/GameData"
 import Result from "./pages/Result"
+import ComoFunciona from "./pages/ComoFunciona"
 
 export default function App() {
   return (
@@ -9,6 +10,7 @@ export default function App() {
       <Route path="/" element={<Home />} />
       <Route path="/dados" element={<GameData />} />
       <Route path="/resultado" element={<Result />} />
+      <Route path="/como-funciona" element={<ComoFunciona />} />
     </Routes>
   )
 }

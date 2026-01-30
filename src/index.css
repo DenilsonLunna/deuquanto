@@ -47,6 +47,7 @@ p {
   display: flex;
   justify-content: center;    /* centro horizontal */
   align-items: center;        /* centro vertical */
+  
 }
 
 .container {
@@ -110,6 +111,8 @@ input,
   background: transparent;
   color: var(--azul-escuro);
 }
+
+
 
 /* =========================
    GRUPOS

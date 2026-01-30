@@ -1,5 +1,5 @@
 import { useLocation, useNavigate } from "react-router-dom"
-
+import Button from "../components/Button.jsx"
 
 export default function Result() {
 const { state } = useLocation()
@@ -56,9 +56,9 @@ return (
     )
   })}
 
-  <button className="primary" onClick={() => navigate("/")}>
+  <Button onClick={() => navigate("/")}>
     + Novo Jogo
-  </button>
+  </Button>
 </div>
 )
 }

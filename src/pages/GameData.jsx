@@ -44,8 +44,34 @@ return (
       onChange={(e) => setValorHora(Number(e.target.value))}
     />
 
+     <div
+      style={{
+        display: "flex",
+        justifyContent: "space-between",
+        alignItems: "center",
+        width: "100%",
+        marginBottom: "8px",
+      }}
+    >
+      <span style={{ fontWeight: "600", fontSize: "16px" }}>
+        👥 Grupos
+      </span>
 
-    <label className="labels" >👥 Grupos</label>
+      <span
+       onClick={() => navigate("/como-funciona")}
+        style={{
+          fontSize: "14px",
+          color: "#1e88e5",
+          cursor: "pointer",
+         
+        }}
+      >
+        o que é grupos?
+      </span>
+    </div>
+      
+
+    
     <divlist className="groups">
         {grupos.map((grupo, index) => (
   <div key={index} className="group">
