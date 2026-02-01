@@ -2,6 +2,7 @@ import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 import Button from "../components/Button.jsx"
 import CircleButton from "../components/CircleButton.jsx"
+import Footer from "../components/Footer.jsx"
 export default function GameData() {
   const navigate = useNavigate()
 
@@ -114,6 +115,9 @@ return (
     </divlist>
     <Button onClick={calcular}>Deu quanto?</Button>
     </div>
+
+<Footer />
 </div>
+
 )
 }

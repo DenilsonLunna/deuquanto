@@ -10,7 +10,7 @@ const ComoFunciona = () => {
       <div style={styles.card}>
         <h1 style={{...styles.title, fontSize: "40px"}}>Como funciona?</h1>
 
-        <img src="/images/logo.png" alt="Deu Quanto" className="logo" />
+        <img src="/images/logo.png" alt="Deu Quanto" style={styles.logo} />
 
         <p style={styles.text}>
           No aplicativo <span style={styles.highlight}>Deu quanto?</span>, os jogadores são
@@ -85,13 +85,12 @@ const styles = {
   },
 
   logo: {
-    width: "70px",
-    margin: "0 0 0px",
-    display: "block",
+    width: "300px",
+    marginBottom: "-20px",
   },
 
   text: {
-    fontSize: "15px",
+    fontSize: "20px",
     color: "#0b2a5b",
     marginBottom: "12px",
     lineHeight: "1.6",
@@ -108,7 +107,7 @@ const styles = {
     paddingLeft: "18px",
     marginBottom: "30px",
     color: "#0b2a5b",
-    fontSize: "14px",
+    fontSize: "18px",
   },
 
   button: {

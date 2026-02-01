@@ -1,6 +1,6 @@
 import { useLocation, useNavigate } from "react-router-dom"
 import Button from "../components/Button.jsx"
-
+import Footer from "../components/Footer.jsx"
 export default function Result() {
 const { state } = useLocation()
 const navigate = useNavigate()
@@ -59,6 +59,8 @@ return (
   <Button onClick={() => navigate("/")}>
     + Novo Jogo
   </Button>
+
+  <Footer />
 </div>
 )
 }
