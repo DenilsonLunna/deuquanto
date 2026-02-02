@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import Button from "../components/Button.jsx";
-
+import Footer from "../components/ChavePix.jsx";
+import ChavePix from "../components/ChavePix.jsx";
 const Doacao = () => {
   const navigate = useNavigate();
   return (
@@ -54,10 +55,7 @@ const Doacao = () => {
           width: "100%",
         }}
       >
-        <h3>💸 Doação via PIX</h3>
-        <p>
-          <strong>Chave PIX:</strong>
-        </p>
+
         <p
           style={{
             fontSize: "18px",
@@ -65,9 +63,10 @@ const Doacao = () => {
             wordBreak: "break-all",
           }}
         >
-          a912d7f0-7752-4a89-9658-f67345373722
+           
+          
         </p>
-
+             <ChavePix />
         <p style={{ marginTop: "10px", fontSize: "14px", color: "#555" }}>
           Qualquer valor faz diferença 🙏
         </p>
