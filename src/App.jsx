@@ -4,7 +4,7 @@ import GameData from "./pages/GameData"
 import Result from "./pages/Result"
 import ComoFunciona from "./pages/ComoFunciona"
 import PoliticaDePrivacidade from "./pages/PoliticaDePrivacidade"
-
+import Doacao from "./pages/Doacao";
 export default function App() {
   return (
     <Routes>
@@ -12,8 +12,8 @@ export default function App() {
       <Route path="/dados" element={<GameData />} />
       <Route path="/resultado" element={<Result />} />
       <Route path="/como-funciona" element={<ComoFunciona />} />
-      <Route path="/politica-de-privacidade" element={<PoliticaDePrivacidade />}
-        />
+      <Route path="/politica-de-privacidade" element={<PoliticaDePrivacidade />} />
+      <Route path="/doacao" element={<Doacao />} />
     </Routes>
   )
 }

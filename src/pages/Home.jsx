@@ -16,10 +16,13 @@ return (
         <Button variant="primary" onClick={() => navigate("/como-funciona")}>
         ❓Como Funciona
         </Button>
-
+        <Button variant="primary" onClick={() => navigate("/doacao")}>
+        💰 Apoie o App
+        </Button>
         </div>
-
+        
         <Footer />
+        
     </div>
 
     

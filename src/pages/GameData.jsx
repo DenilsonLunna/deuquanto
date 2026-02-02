@@ -33,8 +33,12 @@ navigate("/resultado", { state: { valorHora, grupos } })
 
 return (
 <div className="app">
+  <div className="header">
+     <h1>Dados do jogo</h1>
+     <CircleButton onClick={() => navigate(-1)}>{"<"}</CircleButton>
+  </div>
     <div className="container">
-    <h1>Dados do jogo</h1>
+   
 
 
     <label className="labels">💰 Valor da hora (R$)</label>

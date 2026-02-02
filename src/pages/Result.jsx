@@ -1,6 +1,7 @@
 import { useLocation, useNavigate } from "react-router-dom"
 import Button from "../components/Button.jsx"
 import Footer from "../components/Footer.jsx"
+import CircleButton from "../components/CircleButton.jsx"
 export default function Result() {
 const { state } = useLocation()
 const navigate = useNavigate()
@@ -18,7 +19,11 @@ const valorMinuto = valorTotalQuadra / totalMinutosJogador
 
 return (
 <div className="container">
-  <h1>Resultado</h1>
+
+  <div className="header">
+     <h1>Resultado</h1>
+     <CircleButton onClick={() => navigate(-1)}>{"<"}</CircleButton>
+  </div>
 
   <div style={{ display: "flex", gap: "20px", alignItems: "center", height: "40px" }}>
     <p>⏱ Tempo total da quadra:</p>
