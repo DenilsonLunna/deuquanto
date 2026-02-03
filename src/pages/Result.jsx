@@ -2,6 +2,7 @@ import { useLocation, useNavigate } from "react-router-dom"
 import Button from "../components/Button.jsx"
 import Footer from "../components/Footer.jsx"
 import CircleButton from "../components/CircleButton.jsx"
+import AdSense from "../components/AdSense.jsx"
 export default function Result() {
 const { state } = useLocation()
 const navigate = useNavigate()
@@ -66,6 +67,16 @@ return (
   </Button>
 
   <Footer />
+   <AdSense 
+        slot="1234567890" 
+        style={{ 
+            width: "100%", 
+            height: "90px", 
+            marginTop: "10px", 
+            marginBottom: "10px" ,
+            backgroundColor: "#ff0",
+        }} 
+        />
 </div>
 )
 }

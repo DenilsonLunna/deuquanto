@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import Button from "../components/Button.jsx";
+import AdSense from "../components/AdSense.jsx";
 const PoliticaDePrivacidade = () => {
   const navigate = useNavigate();
   return (
@@ -52,6 +53,16 @@ const PoliticaDePrivacidade = () => {
       <Button onClick={() => navigate(-1)}>
           voltar
         </Button>
+         <AdSense 
+        slot="1234567890" 
+        style={{ 
+            width: "100%", 
+            height: "90px", 
+            marginTop: "10px", 
+            marginBottom: "10px" ,
+            backgroundColor: "#ff0",
+        }} 
+        />
     </div>
   );
 };
