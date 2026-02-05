@@ -73,8 +73,7 @@ return (
             width: "100%", 
             height: "90px", 
             marginTop: "10px", 
-            marginBottom: "10px" ,
-            backgroundColor: "#ff0",
+            marginBottom: "10px" 
         }} 
         />
 </div>
