@@ -2,72 +2,84 @@ import { useLocation, useNavigate } from "react-router-dom"
 import Button from "../components/Button.jsx"
 import Footer from "../components/Footer.jsx"
 import CircleButton from "../components/CircleButton.jsx"
+import { useState } from "react"
+import SupportPopup from "../components/SupportPopup"
 
 export default function Result() {
-const { state } = useLocation()
-const navigate = useNavigate()
+  const { state } = useLocation()
+  const navigate = useNavigate()
 
+  const [showPopup, setShowPopup] = useState(true)
 
-const horasMaximas = Math.max(...state.grupos.map(g => g.horas))
-const valorTotalQuadra = horasMaximas * state.valorHora
+  const horasMaximas = Math.max(...state.grupos.map(g => g.horas))
+  const valorTotalQuadra = horasMaximas * state.valorHora
 
-const totalMinutosJogador = state.grupos.reduce((total, g) => {
-  return total + (g.horas * 60 * g.jogadores)
-}, 0)
+  const totalMinutosJogador = state.grupos.reduce((total, g) => {
+    return total + (g.horas * 60 * g.jogadores)
+  }, 0)
 
-const valorMinuto = valorTotalQuadra / totalMinutosJogador
+  const valorMinuto = valorTotalQuadra / totalMinutosJogador
 
+  return (
+    <div className="container">
 
-return (
-<div className="container">
+      {/* POPUP VEM PRIMEIRO */}
+      {showPopup && (
+        <SupportPopup onClose={() => setShowPopup(false)} />
+      )}
 
-  <div className="header">
-     <h1>Resultado</h1>
-     <CircleButton onClick={() => navigate(-1)}>{"<"}</CircleButton>
-  </div>
-
-  <div style={{ display: "flex", gap: "20px", alignItems: "center", height: "40px" }}>
-    <p>⏱ Tempo total da quadra:</p>
-    <strong>{horasMaximas}h</strong>
-  </div>
-
-  <div style={{ display: "flex", gap: "20px", alignItems: "center", height: "40px" }}>
-    <p>💰 Valor total da quadra:</p>
-    <strong>R$ {valorTotalQuadra.toFixed(2)}</strong>
-  </div>
-  {state.grupos.map((g, i) => {
-    const minutosGrupo = g.horas * 60
-    const valorIndividual = minutosGrupo * valorMinuto
-    const valorGrupo = valorIndividual * g.jogadores
-
-    return (
-      <div key={i} className="card">
-        <div className="badge">
-          <div style={{color: "#969696"}}>Grupo {i + 1}</div> - {g.jogadores} jogadores
-        </div>
-
-        <div className="content">
-          <div className="infos">
-            <p>👥 Jogadores: <strong>{g.jogadores}</strong></p>
-            <p>🕒 Tempo jogado: <strong>{g.horas}h</strong></p>
-            <p>💲 Valor por jogador: <strong>R$ {valorIndividual.toFixed(2)}</strong></p>
+      {/* RESULTADO SÓ APARECE DEPOIS QUE FECHAR */}
+      {!showPopup && (
+        <>
+          <div className="header">
+            <h1>Resultado</h1>
+            <CircleButton onClick={() => navigate(-1)}>{"<"}</CircleButton>
           </div>
 
-          <div className="valor">
-            <p>Total do grupo</p>
-            <strong>R$ {valorGrupo.toFixed(2)}</strong>
+          <div style={{ display: "flex", gap: "20px", alignItems: "center", height: "40px" }}>
+            <p>⏱ Tempo total da quadra:</p>
+            <strong>{horasMaximas}h</strong>
           </div>
-        </div>
-      </div>
-    )
-  })}
 
-  <Button onClick={() => navigate("/")}>
-    + Novo Jogo
-  </Button>
+          <div style={{ display: "flex", gap: "20px", alignItems: "center", height: "40px" }}>
+            <p>💰 Valor total da quadra:</p>
+            <strong>R$ {valorTotalQuadra.toFixed(2)}</strong>
+          </div>
 
-  <Footer />
-   
-</div>
-)
+          {state.grupos.map((g, i) => {
+            const minutosGrupo = g.horas * 60
+            const valorIndividual = minutosGrupo * valorMinuto
+            const valorGrupo = valorIndividual * g.jogadores
+
+            return (
+              <div key={i} className="card">
+                <div className="badge">
+                  <div style={{ color: "#969696" }}>Grupo {i + 1}</div> - {g.jogadores} jogadores
+                </div>
+
+                <div className="content">
+                  <div className="infos">
+                    <p>👥 Jogadores: <strong>{g.jogadores}</strong></p>
+                    <p>🕒 Tempo jogado: <strong>{g.horas}h</strong></p>
+                    <p>💲 Valor por jogador: <strong>R$ {valorIndividual.toFixed(2)}</strong></p>
+                  </div>
+
+                  <div className="valor">
+                    <p>Total do grupo</p>
+                    <strong>R$ {valorGrupo.toFixed(2)}</strong>
+                  </div>
+                </div>
+              </div>
+            )
+          })}
+
+          <Button onClick={() => navigate("/")}>
+            + Novo Jogo
+          </Button>
+          
+          <Footer />
+        </>
+      )}
+    </div>
+  )
 }
