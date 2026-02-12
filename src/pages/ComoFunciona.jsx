@@ -50,6 +50,17 @@ const ComoFunciona = () => {
           <li>O valor final fica justo para todos</li>
         </ul>
 
+
+        <p style={styles.text}>
+         Resumo: 
+        </p>
+        
+        <ul style={styles.list}>
+          <li>Se todos os jogadores começaram e terminaram o tempo juntos, basta colocar <strong> 1 grupo</strong></li>
+          <li>Caso algum jogador saia antes do termino total, este jogador(jogadores) deve formar um <strong> novo grupo</strong>.</li>
+         
+        </ul>
+
         <Button style={styles.button} onClick={() => navigate(-1)}>
           voltar
         </Button>

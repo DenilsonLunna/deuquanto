@@ -45,7 +45,12 @@ const Doacao = () => {
         Se este aplicativo é útil para você e deseja contribuir com qualquer
         valor, sua doação será muito bem-vinda ❤️
       </p>
-
+      <div className="card" style={{ marginTop: "15px", alignSelf:"center",justifySelf:"center" }}>
+        <p><strong>Deixe sua sugestão para melhoria do app:</strong></p>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScehVdtEeruiRpP1MIqhzyvCcF19LBS1SgSnoI6BBYLVru3cw/viewform?usp=publish-editor" target="_blank">
+          Deixe sua sugestão aqui (link para Formulario Google)
+        </a>
+      </div>
       <div
         style={{
           marginTop: "30px",
@@ -71,6 +76,8 @@ const Doacao = () => {
         <p style={{ marginTop: "10px", fontSize: "14px", color: "#555" }}>
           Qualquer valor faz diferença 🙏
         </p>
+
+        
       </div>
 
       {/* Caso queira PayPal no futuro */}
