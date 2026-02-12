@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 import Button from "../components/Button.jsx";
 import Footer from "../components/ChavePix.jsx";
 import ChavePix from "../components/ChavePix.jsx";
-import AdSense from "../components/AdSense.jsx";
+
 const Doacao = () => {
   const navigate = useNavigate();
   return (
@@ -97,15 +97,7 @@ const Doacao = () => {
       <Button onClick={() => navigate(-1)}>
           voltar
         </Button>
-         <AdSense 
-        slot="1234567890" 
-        style={{ 
-            width: "100%", 
-            height: "90px", 
-            marginTop: "10px", 
-            marginBottom: "10px" ,
-        }} 
-        />
+         
     </div>
     
   );

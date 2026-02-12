@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom"
 import Button from "../components/Button.jsx"
 import CircleButton from "../components/CircleButton.jsx"
 import Footer from "../components/Footer.jsx"
-import AdSense from "../components/AdSense.jsx"
+
 export default function GameData() {
   const navigate = useNavigate()
 
@@ -122,15 +122,7 @@ return (
     </div>
 
 <Footer />
- <AdSense 
-        slot="1234567890" 
-        style={{ 
-            width: "100%", 
-            height: "90px", 
-            marginTop: "10px", 
-            marginBottom: "10px" ,
-        }} 
-        />
+
 </div>
 
 )
